@@ -4,6 +4,7 @@
 [![Code Climate](https://codeclimate.com/github/hexlet-boilerplates/php-package/badges/gpa.svg)](https://codeclimate.com/github/hexlet-boilerplates/php-package)
 [![Issue Count](https://codeclimate.com/github/hexlet-boilerplates/php-package/badges/issue_count.svg)](https://codeclimate.com/github/hexlet-boilerplates/php-package/issues)
 [![Test Coverage](https://codeclimate.com/github/hexlet-boilerplates/php-package/badges/coverage.svg)](https://codeclimate.com/github/hexlet-boilerplates/php-package/coverage)
+[![PHP CI](https://github.com/YanaKramareva/hexlet-phpunit/actions/workflows/workflow.yml/badge.svg)](https://github.com/YanaKramareva/hexlet-phpunit/actions/workflows/workflow.yml)
 
 ## Addons
 
