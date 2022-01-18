@@ -1,0 +1,46 @@
+{
+ string: value
+ boolean: true
+ number: 5
+ float: 1.25
+}
+
+
+{
+ string: value
+ boolean: true
+ number: 5
+ float: 1.25
+}
+
+
+{
+|-string: value
+|-boolean: true
+|-number: 5
+|-float: 1.25
+}
+
+
+{
+|-|-string: value
+|-|-boolean: true
+|-|-number: 5
+|-|-float: 1.25
+}
+
+
+{
+   string: value
+   boolean: true
+   number: 5
+   float: 1.25
+}
+
+
+{
+...string: value
+...boolean: true
+...number: 5
+...float: 1.25
+}

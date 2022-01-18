@@ -10,10 +10,17 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-echo 'what is your name?: ';
+/*echo 'what is your name?: ';
 $name = trim(fgets(STDIN));
 
 $user = new Php\Package\User($name);
 
 var_dump($user);
-
+*/
+$data = [
+    'hello' => 'world',
+    'is' => true,
+    'nested' => ['count' => 5],
+];
+$data1= true;
+print_r(\App\Stringify\stringify($data, '|-', 2));
