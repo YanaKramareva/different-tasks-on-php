@@ -1,23 +1,14 @@
 <?php
-
 /*
- * Реализуйте функцию sum() из видео, используя итеративный процесс.
-Решение:
-function sum($start, $finish, $func)
+ * function product($num1, $num2, $func)
 {
     // BEGIN
-    $iter = function ($current, $acc) use ($finish, $func, &$iter) {
-        if ($current > $finish) {
-            return $acc;
-        }
-
-        return $iter($current + 1, $acc + $func($current));
-    };
-
-    return $iter($start, 0);
+    if ($num1 === $num2) {
+        return $num2;
+    }
+    return $func(product($num1, $num2 - 1, $func), $num2);
     // END
 }
-
 Реализуйте функцию product(), которая сворачивает последовательность с помощью переданной функции. Последовательность задается первыми двумя аргументами. Первый это начало последовательности, второй это окончание. Например, последовательность [1, 4] это 1, 2, 3, 4. Свертка это сведение последовательности к какому-то значению. Само значение зависит от того, какая операция применяется при свертке. Обратите внимание, что последовательность, типа [$x, $x], состоит из одного числа $x и свертке не подлежит, функция в этом случае должна вернуть само число $x.
 
 'С помощью переданной функции' означает то, что мы применяем эту функцию к элементам последовательности и используем ее результат, как аккумулятор (накопитель результата).
@@ -42,15 +33,18 @@ f(f(f($left3, $right3), $right2), $right1); // $right3 = 2
 f(f(f(1, 2), 3), 4);
 f(f(-1, 3), 4);
 f(-4, 4); // -8
+
  */
+namespace App\Product;
 
-namespace App\Sum;
-
-function sum($a, $b, $func)
+function product($num1, $num2, $func)
 {
-        if ($a > $b) {
-            return 0;
-        }
-        return $func($a) + sum($a + 1, $b, $func);
-}
+    if ($num1 === $num2){
+        return $num1;
+    }
+    if ($num1 > $num2) {
+        return $func;
+    }
 
+    return $func(product($num1, $num2 - 1,$func), $num2);
+}

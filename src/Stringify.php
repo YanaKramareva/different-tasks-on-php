@@ -86,46 +86,25 @@ function toString($value)
 }
 
 
-/*8
+
 function stringify($value, $replacer = ' ', $spacesCount = 1)
 {
+    $iter = function ($value, $depth = 1) use (&$iter, $replacer, $spacesCount){
+
+    };
     if (is_bool($value) || is_int($value) || is_float($value) || is_string($value)){
         return toString($value);
     }
-    $newReplacer = iter($replacer, $spacesCount);
-    $encode= array_map(function ($k, $v) use ($newReplacer, $spacesCount, $replacer) {
-        is_array($v) || is_object($v)? $newValue = stringify($v, iter($newReplacer, $spacesCount)):
-            $newValue = $v;
-        return $newReplacer. toString($k).": " .toString($newValue). PHP_EOL;
-    }, array_keys($value), array_values($value));
-    $string = implode($encode);
-    return "{".PHP_EOL. $string."}";
-}
-*/
-
-
-function stringify($value, $replacer = ' ', $spacesCount = 1)
-{
-    $indent = function($replacer, $spacesCount) use (&$indent){
-        if ($spacesCount === 1) {
+    $newReplacer = function ($replacer)  use (&$newReplacer, $spacesCount){
+        if ($spacesCount === 1){
             return $replacer;
         }
-        return $replacer.$indent($replacer, $spacesCount - 1);
+        return $replacer.$newReplacer($spacesCount - 1, $replacer);
     };
-
-    if (is_bool($value) || is_int($value) || is_float($value) || is_string($value)){
-        return toString($value);
-    }
-    $depth = function ($acc = 0, $spacesCount)  use (&$depth){
-        if ($spacesCount === 1){
-            return $acc + 1;
-        }
-        return $acc + $depth($acc, $spacesCount - 1);
-    };
-
-    $encode= array_map(function ($k, $v) use ($depth, $indent,  $spacesCount, $replacer) {
-        is_array($v) || is_object($v)? $newValue = stringify($v, $replacer, $spacesCount+$depth): $newValue = $v;
-        return $indent. toString($k).": " .toString($newValue). PHP_EOL;
+    $encode= array_map(function ($k, $v) use ($newReplacer, $spacesCount, $replacer) {
+        is_array($v) || is_object($v)? $newValue = stringify($v, $newReplacer, $spacesCount ):
+            $newValue = $v;
+        return $newReplacer. toString($k).": " .toString($newValue). PHP_EOL;
     }, array_keys($value), array_values($value));
     $string = implode($encode);
     return "{".PHP_EOL. $string."}";

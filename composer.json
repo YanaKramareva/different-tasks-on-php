@@ -16,7 +16,8 @@
   "autoload": {
     "psr-4": {
       "Php\\Package\\": "src",
-      "Php\\Package\\Tests\\": "tests"
+      "Php\\Package\\Tests\\": "tests",
+      "App\\": "src/"
     },
     "files": [
       "src/Utils.php",
@@ -29,7 +30,17 @@
       "src/listFlatten.php",
       "src/sameParityFilter.php",
       "src/stringify.php",
-      "src/factorial.php"
+      "src/factorial.php",
+      "src/sum.php",
+      "src/product.php",
+      "src/factor.php",
+      "src/Double.php",
+      "src/cons_car_cdr.php",
+      "src/Rational.php",
+      "src/Lenth.php",
+      "src/Append.php",
+      "src/Reverse.php",
+      "src/Url.php"
     ]
   },
   "require": {
