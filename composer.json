@@ -4,11 +4,11 @@
   "type": "library",
   "authors": [
     {
-      "name": "Kirill Mokevnin",
-      "email": "mokevnin@gmail.com"
+      "name": "Yana Kramareva",
+      "email": "y.kramareva@gmail.com"
     }
   ],
-  "description": "hexlet php-package",
+  "description": "php-package",
   "license": "MIT",
   "scripts": {
     "test": "phpunit tests"
@@ -40,7 +40,9 @@
       "src/Lenth.php",
       "src/Append.php",
       "src/Reverse.php",
-      "src/Url.php"
+      "src/Url.php",
+      "src/Safe.php",
+      "src/Converter.php"
     ]
   },
   "require": {
