@@ -42,14 +42,17 @@
       "src/Reverse.php",
       "src/Url.php",
       "src/Safe.php",
-      "src/Converter.php"
+      "src/Converter.php",
+      "src/Comparator.php",
+      "src/Arrays.php"
     ]
   },
   "require": {
     "tightenco/collect": "^5.6",
     "nesbot/carbon": "^2.32.2",
     "symfony/string": "^5.1",
-    "phpstan/phpstan": "^0.12.65"
+    "phpstan/phpstan": "^0.12.65",
+    "php-ds/php-ds": "^1.4"
   },
   "require-dev": {
     "psy/psysh": "@stable",
