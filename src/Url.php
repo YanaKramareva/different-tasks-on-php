@@ -40,7 +40,7 @@ Url\toString($url); // 'http://hexlet.io/404?page=5'
 Собирать данные в url придется самостоятельно
 
  */
-namespace App\Url;
+/*namespace App\Url;
 
 function make(string $url)
 {
@@ -96,3 +96,4 @@ function getAllQueryParams($data)
 {
     return $data['query'] ?? [];
 }
+*/
