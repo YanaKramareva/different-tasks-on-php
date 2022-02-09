@@ -72,31 +72,31 @@ class Rational
 
 class RationalClass
 {
-public $numer;
-public $denom;
+    public $numer;
+    public $denom;
 
-public function __construct($numer, $denom)
-{
-    $this->numer = $numer;
-    $this->denom = $denom;
-}
+    public function __construct($numer, $denom)
+    {
+        $this->numer = $numer;
+        $this->denom = $denom;
+    }
 
-public function getNumer()
-{
-    return $this->numer;
-}
+    public function getNumer()
+    {
+        return $this->numer;
+    }
 
-public  function getDenom()
-{
-    return $this->denom;
-}
+    public function getDenom()
+    {
+        return $this->denom;
+    }
 
-public function add($rat)
-{
-    $numer = $this->numer * $rat->denom + $rat->numer * $this->denom;
-    $denom = $this->denom * $rat->denom;
-    return new RationalClass($numer, $denom);
-}
+    public function add($rat)
+    {
+        $numer = $this->numer * $rat->denom + $rat->numer * $this->denom;
+        $denom = $this->denom * $rat->denom;
+        return new RationalClass($numer, $denom);
+    }
 
     public function sub($rat)
     {
@@ -104,5 +104,4 @@ public function add($rat)
         $denom = $this->denom * $rat->denom;
         return new RationalClass($numer, $denom);
     }
-
 }

@@ -25,11 +25,10 @@ use function Php\Pairs\Pairs\toString;
 function append($list1, $list2)
 {
 
-    if ($list1 === null){
+    if ($list1 === null) {
         return $list2;
     }
-    if (cdr($list1) === null)
-    {
+    if (cdr($list1) === null) {
         return cons(car($list1), $list2);
     }
     return cons(car($list1), append(cdr($list1), $list2));

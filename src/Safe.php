@@ -1,8 +1,10 @@
 <?php
+
 namespace App\Safe;
 
 /*
- * Реализуйте функцию json_decode, которая работает почти как встроенная, но вместо возврата ошибки, выбрасывает исключение \Exception.
+ * Реализуйте функцию json_decode, которая работает почти как встроенная,
+ * но вместо возврата ошибки, выбрасывает исключение \Exception.
 
 <?php
 
@@ -33,10 +35,10 @@ function json_decode($json, $assoc = false)
 function json_decode($json, $assoc = false)
 {
     // BEGIN (write your solution here)
-$result = \json_decode($json, $assoc);
-if (json_last_error() !== JSON_ERROR_NONE) {
-    throw new \Exception("'{$json}' is not readable");
-}
-return $result;
+    $result = \json_decode($json, $assoc);
+    if (json_last_error() !== JSON_ERROR_NONE) {
+        throw new \Exception("'{$json}' is not readable");
+    }
+    return $result;
     // END
 }

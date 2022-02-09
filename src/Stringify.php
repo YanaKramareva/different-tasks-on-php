@@ -1,4 +1,5 @@
 <?php
+
 /*
  * JavaScript содержит метод JSON.stringify() для приведения к строке любого значения. Он работает следующим образом:
 
@@ -89,23 +90,24 @@ function toString($value)
 
 function stringify($value, $replacer = ' ', $spacesCount = 1)
 {
-    $iter = function ($value, $depth = 1) use (&$iter, $replacer, $spacesCount){
-
+    $iter = function ($value, $depth = 1) use (&$iter, $replacer, $spacesCount) {
     };
-    if (is_bool($value) || is_int($value) || is_float($value) || is_string($value)){
+    if (is_bool($value) || is_int($value) || is_float($value) || is_string($value)) {
         return toString($value);
     }
-    $newReplacer = function ($replacer)  use (&$newReplacer, $spacesCount){
-        if ($spacesCount === 1){
+    $newReplacer = function ($replacer) use (&$newReplacer, $spacesCount) {
+
+        if ($spacesCount === 1) {
             return $replacer;
         }
-        return $replacer.$newReplacer($spacesCount - 1, $replacer);
+        return $replacer . $newReplacer($spacesCount - 1, $replacer);
     };
-    $encode= array_map(function ($k, $v) use ($newReplacer, $spacesCount, $replacer) {
-        is_array($v) || is_object($v)? $newValue = stringify($v, $newReplacer, $spacesCount ):
+    $encode = array_map(function ($k, $v) use ($newReplacer, $spacesCount, $replacer) {
+
+        is_array($v) || is_object($v) ? $newValue = stringify($v, $newReplacer, $spacesCount) :
             $newValue = $v;
-        return $newReplacer. toString($k).": " .toString($newValue). PHP_EOL;
+        return $newReplacer . toString($k) . ": " . toString($newValue) . PHP_EOL;
     }, array_keys($value), array_values($value));
     $string = implode($encode);
-    return "{".PHP_EOL. $string."}";
+    return "{" . PHP_EOL . $string . "}";
 }

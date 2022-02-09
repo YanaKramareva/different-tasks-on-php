@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Частой задачей при работе с деревьями (особенно HTML), является необходимость выбрать список узлов по определенному критерию.
 
@@ -124,14 +125,14 @@ use function Php\Html\Tags\HtmlTags\map;
 function select($query, $tree)
 {
     return reduce($tree, function ($element, $acc) use ($query) {
+
         $queryTree = reduce($query, fn ($element, $acc) => concat($acc, l($element)), l());
         $headQuery = head($queryTree);
         $tailQuery = tail($queryTree);
         $queryForNewIteration = listToString($tailQuery);
         if (is($headQuery, $element)) {
             $acc = concat($acc, l($element));
-        }
-        elseif (hasChildren($element)) {
+        } elseif (hasChildren($element)) {
             if (!isEmpty($tailQuery)) {
                 $acc = concat($acc, select($queryForNewIteration, children($element)));
             }

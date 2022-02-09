@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Реализуйте функцию length(), которая считает длину списка;
 
@@ -23,10 +24,10 @@ use function Php\Pairs\Pairs\toString;
 
 function length($items)
 {
-    if ($items === null){
+    if ($items === null) {
         return null;
     }
-    if (cdr($items) === null){
+    if (cdr($items) === null) {
         return 1;
     }
     return 1 + length(cdr($items)) ;

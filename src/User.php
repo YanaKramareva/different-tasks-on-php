@@ -2,7 +2,6 @@
 
 namespace App;
 
-
 /*
  * Реализуйте класс User, который создает пользователей. Конструктор класса принимает на вход два параметра: идентификатор и имя.
 
@@ -48,7 +47,6 @@ class User implements Comparable
     {
         $this->name = $name;
         $this->id = $id;
-
     }
 
     public function getName()

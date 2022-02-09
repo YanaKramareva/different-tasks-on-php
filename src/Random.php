@@ -28,10 +28,10 @@ $result2 === $result22; // true
  */
 class Random
 {
-    const RAND_MAX = 32767;
-    const RAND = 1103515245;
-    const RAND2 = 12345;
-    const  RAND3 = 65536;
+    public const RAND_MAX = 32767;
+    public const RAND = 1103515245;
+    public const RAND2 = 12345;
+    public const  RAND3 = 65536;
     private $seed;
     public $next;
 
@@ -41,7 +41,8 @@ class Random
     }
 
     public function getSeed()
-    {var_dump($this->seed);
+    {
+        var_dump($this->seed);
         return $this->seed;
     }
 

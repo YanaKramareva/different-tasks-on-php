@@ -70,9 +70,9 @@ class Address
 class Address
 {
     private array $address;
-private string $country;
-private string $city;
-private string $street;
+    private string $country;
+    private string $city;
+    private string $street;
 
     public function __construct($country, $city, $street)
     {

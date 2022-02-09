@@ -1,4 +1,5 @@
 <?php
+
 /*
  * JavaScript содержит метод JSON.stringify() для приведения к строке любого значения. Он работает следующим образом:
 
@@ -106,27 +107,28 @@ function stringify($value, $replacer = ' ', $spacesCount = 1)
 
 function stringify($value, $replacer = ' ', $spacesCount = 1)
 {
-    $indent = function($replacer, $spacesCount) use (&$indent){
+    $indent = function ($replacer, $spacesCount) use (&$indent) {
+
         if ($spacesCount === 1) {
             return $replacer;
         }
-        return $replacer.$indent($replacer, $spacesCount - 1);
+        return $replacer . $indent($replacer, $spacesCount - 1);
     };
-
-    if (is_bool($value) || is_int($value) || is_float($value) || is_string($value)){
+    if (is_bool($value) || is_int($value) || is_float($value) || is_string($value)) {
         return toString($value);
     }
-    $depth = function ($acc = 0, $spacesCount)  use (&$depth){
-        if ($spacesCount === 1){
+    $depth = function ($acc = 0, $spacesCount) use (&$depth) {
+
+        if ($spacesCount === 1) {
             return $acc + 1;
         }
         return $acc + $depth($acc, $spacesCount - 1);
     };
+    $encode = array_map(function ($k, $v) use ($depth, $indent, $spacesCount, $replacer) {
 
-    $encode= array_map(function ($k, $v) use ($depth, $indent,  $spacesCount, $replacer) {
-        is_array($v) || is_object($v)? $newValue = stringify($v, $replacer, $spacesCount+$depth): $newValue = $v;
-        return $indent. toString($k).": " .toString($newValue). PHP_EOL;
+        is_array($v) || is_object($v) ? $newValue = stringify($v, $replacer, $spacesCount + $depth) : $newValue = $v;
+        return $indent . toString($k) . ": " . toString($newValue) . PHP_EOL;
     }, array_keys($value), array_values($value));
     $string = implode($encode);
-    return "{".PHP_EOL. $string."}";
+    return "{" . PHP_EOL . $string . "}";
 }

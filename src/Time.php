@@ -53,7 +53,7 @@ class Time
         $array = explode(':', $time);
         $hours = $array[0];
         $minutes = $array[1];
-    return new self($hours, $minutes);
+        return new self($hours, $minutes);
     }
     // END
 
@@ -67,5 +67,4 @@ class Time
     {
         return "{$this->h}:{$this->m}";
     }
-
 }

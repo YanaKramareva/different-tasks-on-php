@@ -2,13 +2,7 @@
 
 namespace Php\Package\Tests;
 
-use PHPUnit\Framework\TestCase;
-use Php\Package\User;
-
-namespace App\Tests;
-
 use App\User;
-use App\Comparable;
 use PHPUnit\Framework\TestCase;
 
 class UserTest extends TestCase

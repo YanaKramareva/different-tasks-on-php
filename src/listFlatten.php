@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Реализуйте функцию flatten(), которая делает плоским вложенный список.
 
@@ -39,8 +40,9 @@ use function PHPUnit\Framework\isEmpty;
 
 function listFlatten($list)
 {
-    return reduce($list, function ( $item, $acc) {
-        isList($item)? $acc = (concat($acc, listFlatten($item))): $acc = reverse(append(reverse($acc), $item));
+    return reduce($list, function ($item, $acc) {
+
+        isList($item) ? $acc = (concat($acc, listFlatten($item))) : $acc = reverse(append(reverse($acc), $item));
         return $acc;
     }, l());
 }

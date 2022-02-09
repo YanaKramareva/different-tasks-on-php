@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Реализуйте функцию convert(), которая принимает на вход массив определённой структуры и возвращает ассоциативный массив, полученный из этого массива.
 
@@ -23,5 +24,5 @@ namespace App\Convert;
 
 function convert(array $array): array
 {
-return $array;
+    return $array;
 }
