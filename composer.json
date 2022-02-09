@@ -17,25 +17,24 @@
     "psr-4": {
       "Php\\Package\\": "src",
       "Php\\Package\\Tests\\": "tests",
-      "App\\": "src/"
+      "App\\": "src"
     },
     "files": [
       "src/Utils.php",
       "src/Convert.php",
-      "src/findFilesByName.php",
-      "src/flatten.php",
-      "src/map_filter_reduce.php",
-      "src/select.php",
-      "src/stringify.php",
-      "src/listFlatten.php",
-      "src/sameParityFilter.php",
-      "src/stringify.php",
-      "src/factorial.php",
-      "src/sum.php",
-      "src/product.php",
-      "src/factor.php",
+      "src/FindFilesByName.php",
+      "src/Flatten.php",
+      "src/Map.php",
+      "src/Select.php",
+      "src/Stringify.php",
+      "src/SameParityFilter.php",
+      "src/Stringify.php",
+      "src/Factorial.php",
+      "src/Sum.php",
+      "src/Product.php",
+      "src/Factor.php",
       "src/Double.php",
-      "src/cons_car_cdr.php",
+      "src/ConsCarCdr.php",
       "src/Rational.php",
       "src/Lenth.php",
       "src/Append.php",
@@ -44,13 +43,15 @@
       "src/Safe.php",
       "src/Converter.php",
       "src/Comparator.php",
-      "src/Arrays.php"
+      "src/Arrays.php",
+      "src/Normalizer.php",
+      "src/GetQuestions.php"
     ]
   },
   "require": {
     "tightenco/collect": "^8.81",
     "nesbot/carbon": "^2.32.2",
-    "symfony/string": "^5.1",
+    "symfony/string": "^6.0",
     "phpstan/phpstan": "^0.12.65",
     "php-ds/php-ds": "^1.4"
   },

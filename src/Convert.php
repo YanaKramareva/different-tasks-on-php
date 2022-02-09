@@ -31,7 +31,7 @@ function convert($arr)
  */
 namespace App\Convert;
 
-function convert(array $array)
+function convertArray(array $array)
 {
    return array_reduce($array, function ($acc, $item) {
               [$key, $value] = $item;
