@@ -21,7 +21,6 @@ $ make test
 
 ## Test Coverage
 
--   see `phpunit.xml`
--   <https://docs.codeclimate.com/docs/configuring-test-coverage>
--   add CC_TEST_REPORTER_ID to workflow as SECERETS ENV VARIABLE (for safety)
-
+```sh
+$ make test-coverage
+```
