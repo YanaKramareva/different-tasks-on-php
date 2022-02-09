@@ -7,7 +7,7 @@ use PHPUnit\Framework\TestCase;
 use function App\Product\product;
 use function App\Sum\sum;
 
-class SumTest extends TestCase
+/*class SumTest extends TestCase
 {
     public function testSum()
     {
@@ -35,3 +35,4 @@ class SumTest extends TestCase
         $this->assertEquals(40, product(2, 4, $func));
     }
 }
+*/

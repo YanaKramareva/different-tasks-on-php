@@ -7,7 +7,7 @@ use PHPUnit\Framework\TestCase;
 use function App\Factor\factor;
 use function App\Double\double;
 
-class FactorTest extends TestCase
+/*class FactorTest extends TestCase
 {
     public function testFactor()
     {
@@ -36,3 +36,4 @@ class FactorTest extends TestCase
         $this->assertEquals(6, $inc4(2));
     }
 }
+*/

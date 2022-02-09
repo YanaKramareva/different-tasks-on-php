@@ -6,7 +6,7 @@ use PHPUnit\Framework\TestCase;
 
 use function App\Arrays\getChunked;
 
-class ArraysTest extends TestCase
+/*class ArraysTest extends TestCase
 {
     public function testGetChunked()
     {
@@ -30,3 +30,4 @@ class ArraysTest extends TestCase
         $this->assertEquals($expected5, getChunked($array5, $size5));
     }
 }
+*/

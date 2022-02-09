@@ -11,7 +11,7 @@ use function Php\Html\Tags\HtmlTags\append;
 use function Php\Html\Tags\HtmlTags\node;
 use function App\Solution\select;
 
-class SelectTest extends TestCase
+/*class SelectTest extends TestCase
 {
     protected function setUp(): void
     {
@@ -43,3 +43,4 @@ class SelectTest extends TestCase
         $this->assertEquals(7, length(select(l('div'), $this->dom)));
     }
 }
+*/

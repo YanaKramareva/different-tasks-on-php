@@ -5,7 +5,7 @@ namespace App\Tests;
 use App\Url;
 use PHPUnit\Framework\TestCase;
 
-class UrlTest extends TestCase
+/*class UrlTest extends TestCase
 {
     public function testUrl()
     {
@@ -54,3 +54,4 @@ class UrlTest extends TestCase
         $this->assertEquals('https://hexlet.io/?q=high&page=5', Url\toString($url));
     }
 }
+*/

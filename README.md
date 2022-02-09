@@ -1,19 +1,17 @@
-# php-package
+# Different tasks on php
 
-[![Github Actions Status](https://github.com/hexlet-boilerplates/php-package/workflows/PHP%20CI/badge.svg)](https://github.com/hexlet-boilerplates/php-package/actions)
-[![Code Climate](https://codeclimate.com/github/hexlet-boilerplates/php-package/badges/gpa.svg)](https://codeclimate.com/github/hexlet-boilerplates/php-package)
-[![Issue Count](https://codeclimate.com/github/hexlet-boilerplates/php-package/badges/issue_count.svg)](https://codeclimate.com/github/hexlet-boilerplates/php-package/issues)
+[![Github Actions Status](https://github.com/YanaKramareva/php-project-lvl2/workflows/hexlet-check/badge.svg)](https://github.com/YanaKramareva/different-tasks-on-php/actions)
+[![Code Climate](href="https://codeclimate.com/github/YanaKramareva/different-tasks-on-php/maintainability"><img src="https://api.codeclimate.com/v1/badges/82facc7880f6f8be7c76/maintainability" /></a>
+<a href="https://codeclimate.com/github/YanaKramareva/different-tasks-on-php/test_coverage"><img src="https://api.codeclimate.com/v1/badges/82facc7880f6f8be7c76/test_coverage" /></a>
+
+[![Issue Count](https://codeclimate.com/github/YanaKramareva/different-tasks-on-php/badges/issue_count.svg)](https://codeclimate.com/github/YanaKramareva/different-tasks-on-php/issues)
 [![Test Coverage](https://codeclimate.com/github/hexlet-boilerplates/php-package/badges/coverage.svg)](https://codeclimate.com/github/hexlet-boilerplates/php-package/coverage)
-[![PHP CI](https://github.com/YanaKramareva/hexlet-phpunit/actions/workflows/workflow.yml/badge.svg)](https://github.com/YanaKramareva/hexlet-phpunit/actions/workflows/workflow.yml)
-
-## Addons
-
-Use <http://psysh.org/>
+[![PHP CI](https://github.com/YanaKramareva/different-tasks-on-php/actions/workflows/workflow.yml/badge.svg)](https://github.com/YanaKramareva/YanaKramareva/different-tasks-on-php/actions/workflows/workflow.yml)
 
 ## Setup
 
 ```sh
-$ git clone https://github.com/hexlet-boilerplates/php-package.git
+$ git clone https://github.com/YanaKramareva/different-tasks-on-php
 
 $ make install
 ```
@@ -30,6 +28,3 @@ $ make test
 -   <https://docs.codeclimate.com/docs/configuring-test-coverage>
 -   add CC_TEST_REPORTER_ID to workflow as SECERETS ENV VARIABLE (for safety)
 
-[![Hexlet Ltd. logo](https://raw.githubusercontent.com/Hexlet/assets/master/images/hexlet_logo128.png)](https://ru.hexlet.io/pages/about?utm_source=github&utm_medium=link&utm_campaign=php-package)
-
-This repository is created and maintained by the team and the community of Hexlet, an educational project. [Read more about Hexlet (in Russian)](https://ru.hexlet.io/pages/about?utm_source=github&utm_medium=link&utm_campaign=php-package).
