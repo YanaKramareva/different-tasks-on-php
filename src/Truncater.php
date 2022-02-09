@@ -10,7 +10,8 @@ namespace App;
 
 truncate('long text', ['length' => 3]); // lon...
 src\Truncater.php
-Реализуйте класс Truncater с единственным методом truncate(). В классе уже присутствует конфигурация по умолчанию:
+Реализуйте класс Truncater с единственным методом truncate(). В классе уже присутствует конфигурация
+по умолчанию:
 
 <?php
 
@@ -84,6 +85,8 @@ class Truncater
     public function truncate($string, $options = [])
     {
         $truncater = new Truncater(array_merge($this->options, $options));
-        return $truncater->options['length'] < mb_strlen($string) ? substr($string, 0, $truncater->options['length']) . $truncater->options['separator'] : $string;
+        return $truncater->options['length'] < mb_strlen($string) ?
+            substr($string, 0, $truncater->options['length']) .
+            $truncater->options['separator'] : $string;
     }
 }

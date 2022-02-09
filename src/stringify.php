@@ -1,7 +1,8 @@
 <?php
 
 /*
- * JavaScript содержит метод JSON.stringify() для приведения к строке любого значения. Он работает следующим образом:
+ * JavaScript содержит метод JSON.stringify()
+ *  для приведения к строке любого значения. Он работает следующим образом:
 
 JSON.stringify('hello'); // "hello" - для строковых значений добавляются кавычки
 JSON.stringify(true);    // true    - значение приведено к строке, но без кавычек
@@ -117,7 +118,7 @@ function stringify($value, $replacer = ' ', $spacesCount = 1)
     if (is_bool($value) || is_int($value) || is_float($value) || is_string($value)) {
         return toString($value);
     }
-    $depth = function ($acc = 0, $spacesCount) use (&$depth) {
+    $depth = function ($spacesCount, $acc = 0) use (&$depth) {
 
         if ($spacesCount === 1) {
             return $acc + 1;
