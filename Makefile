@@ -14,5 +14,8 @@ lint-fix:
 test:
 	composer exec --verbose phpunit tests
 
+validate:
+	composer validate
+
 test-coverage:
 	composer exec --verbose phpunit tests -- --coverage-clover build/logs/clover.xml
