@@ -28,17 +28,25 @@ echo $result;
 // ehu?
 // one two?
 
+function getQuestions(string $text)
+{
+    $result = collect(s($text)->split("\n"))
+        ->map(fn($line) => $line->trim())
+        ->filter(fn ($line) => $line->endsWith('?'))
+        ->toArray();
+    return implode("\n", $result);
+}
  */
 
 namespace App\Normalizer\GetQuestions;
 
 use function Symfony\Component\String\s;
-use function Symfony\Component\String\u;
 
-function getQuestions(string $text)
+function getQuestions(string $text): string
 {
-    $textString = s($text);
-    $array = $textString->split('\r\n');
-    var_dump($array);
-    return implode('?', $array);
+    $objectString = s($text);
+    $array = $objectString->trim()->replace("\r\n", "\n")->replace("\r", "\n")->replace("\t\n", "\n")->split("\n");
+    $result = collect($array)->filter(fn($value) => s($value)->endsWith("?"))->all();
+    var_dump($result);
+    return implode("\n", $result);
 }
