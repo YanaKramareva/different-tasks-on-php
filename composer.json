@@ -36,7 +36,8 @@
       "src/Comparator.php",
       "src/Arrays.php",
       "src/Normalizer.php",
-      "src/GetQuestions.php"
+      "src/GetQuestions.php",
+      "src/Pow.php"
     ]
   },
   "require": {
