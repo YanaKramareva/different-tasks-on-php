@@ -35,12 +35,13 @@ function getHeight($rectangle)
 
 function containsOrigin($rectangle)
 {
-    $rectangle['a'] = ['x' => getX(getStartPoint($rectangle)), 'y' => getY(getStartPoint($rectangle)) - getHeight($rectangle)];
-    $rectangle['b'] = ['x' => getX(getStartPoint($rectangle)), 'y' => getY(getStartPoint($rectangle))];
-    $rectangle['c'] = ['x' => getX(getStartPoint($rectangle)) + getWidth($rectangle), 'y' => getY(getStartPoint($rectangle))];
-    $rectangle['d'] = ['x' => getX(getStartPoint($rectangle)) + getWidth($rectangle), 'y' => getY(getStartPoint($rectangle)) - getHeight($rectangle)];
-    if (getQuadrant($rectangle['b']) === 2 && getQuadrant($rectangle['d'] === 4)) {
-        return true;
-    }
-    return false;
+    $rectangle['a'] = ['x' => getX(getStartPoint($rectangle)),
+        'y' => getY(getStartPoint($rectangle)) - getHeight($rectangle)];
+    $rectangle['b'] = ['x' => getX(getStartPoint($rectangle)),
+        'y' => getY(getStartPoint($rectangle))];
+    $rectangle['c'] = ['x' => getX(getStartPoint($rectangle)) + getWidth($rectangle),
+        'y' => getY(getStartPoint($rectangle))];
+    $rectangle['d'] = ['x' => getX(getStartPoint($rectangle)) + getWidth($rectangle),
+        'y' => getY(getStartPoint($rectangle)) - getHeight($rectangle)];
+    return getQuadrant($rectangle['b']) === 2 && getQuadrant($rectangle['d'] === 4);
 }

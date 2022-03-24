@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Tests;
+/*namespace App\Tests;
 
-/*
+
  * Протестируйте функцию getUserMainLanguage($username, $client),
  *  которая определяет язык на котором пользователь создал больше всего репозиториев.
  *  Для реализации этой задачи, функция getUserMainLanguage() выполняет запрос
@@ -22,7 +22,7 @@ $data = $client->repos($user);
 print_r($data);
 // [[ 'language' => 'php', ... ], [ 'language' => 'javascript', ... ], ...]
 
- */
+
 
 use App\RepositoryClient;
 use PHPUnit\Framework\TestCase;
@@ -51,3 +51,4 @@ class GetUserMainLanguageTest extends TestCase
         $this->assertEquals($expected, $userMainLanguage);
     }
 }
+*/

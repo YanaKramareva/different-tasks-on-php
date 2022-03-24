@@ -16,5 +16,3 @@ function digPow($n, $p)
     }, 0);
     return ($sumOfPow % $n) === 0 ? ($sumOfPow / $n) : (int)-1;
 }
-
-var_dump(digPow(89, 1));
