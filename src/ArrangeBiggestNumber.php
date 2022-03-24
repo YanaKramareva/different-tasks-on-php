@@ -18,7 +18,7 @@ namespace App\Solution;
 function arrangeBiggestNumber($array)
 {
     $sortedArray = $array;
-$callback = function ($a, $b) {
+    $callback = function ($a, $b) {
         if ($a === $b) {
             return 0;
         }
@@ -29,4 +29,3 @@ $callback = function ($a, $b) {
     usort($sortedArray, $callback);
     return implode('', $sortedArray);
 }
-

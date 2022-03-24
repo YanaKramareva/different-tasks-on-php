@@ -43,5 +43,5 @@ function containsOrigin($rectangle)
         'y' => getY(getStartPoint($rectangle))];
     $rectangle['d'] = ['x' => getX(getStartPoint($rectangle)) + getWidth($rectangle),
         'y' => getY(getStartPoint($rectangle)) - getHeight($rectangle)];
-    return getQuadrant($rectangle['b']) === 2 && getQuadrant($rectangle['d'] === 4);
+    return getQuadrant($rectangle['b']) === 2 && getQuadrant($rectangle['d']) === 4;
 }
