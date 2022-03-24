@@ -37,7 +37,38 @@
       "src/Arrays.php",
       "src/Normalizer.php",
       "src/GetQuestions.php",
-      "src/Pow.php"
+      "src/Pow.php",
+      "src/Points.php",
+      "src/Rectangle.php",
+      "src/BuildUser.php",
+      "src/MakeDirs.php",
+      "src/GetForkedRepositories.php",
+      "src/GetUserMainLanguage.php",
+      "src/GetFilesCount.php",
+      "src/LinkedList.php",
+      "src/Flatten.php",
+      "src/ArrangeBiggestNumber.php",
+      "src/GetLinks.php",
+      "src/BinarySum.php",
+      "src/IsPowerOfThree.php",
+      "src/FizzBuzz.php",
+      "src/Fibonachi.php",
+      "src/AddDigits.php",
+      "src/IsBalanced.php",
+      "src/IsPerfect.php",
+      "src/IsHappy.php",
+      "src/ReverseString.php",
+      "src/IsPalindrome.php",
+      "src/GetChunked.php",
+      "src/CalcInPolishNotation.php",
+      "src/GetMirrorMatrix.php",
+      "src/LengthOfLastWord.php",
+      "src/SummaryRanges.php",
+      "src/HammingWeight.php",
+      "src/CompareVersion.php",
+      "src/GetLongestLength.php",
+      "src/GetLinks.php",
+      "src/ReverseNumber.php"
     ]
   },
   "require": {
@@ -45,7 +76,11 @@
     "nesbot/carbon": "^2.32.2",
     "symfony/string": "^6.0",
     "phpstan/phpstan": "^0.12.65",
-    "php-ds/php-ds": "^1.4"
+    "php-ds/php-ds": "^1.4",
+    "fzaninotto/faker": "^1.5",
+    "knplabs/github-api": "^3.0",
+    "guzzlehttp/guzzle": "^7.0.1",
+    "http-interop/http-factory-guzzle": "^1.0"
   },
   "require-dev": {
     "psy/psysh": "@stable",
@@ -57,7 +92,8 @@
     "hexlet/trees": "v1.0.1",
     "hexlet/html-tags": "v1.0.1",
     "hexlet/pairs": "v1.0.1",
-    "hexlet/pairs-data": "v1.0.1"
+    "hexlet/pairs-data": "v1.0.1",
+    "mikey179/vfsstream": "v1.6.10"
   },
   "config": {
     "allow-plugins": {

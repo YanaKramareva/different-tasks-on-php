@@ -6,22 +6,26 @@ use PHPUnit\Framework\TestCase;
 
 use function App\Solution\flatten;
 
-/*class FlattenTest extends TestCase
+class FlattenTest extends TestCase
 {
-
-    public function testFlatten($actual, $equal)
+    /**
+     * @dataProvider additionProvider
+     */
+    public function testFlatten($expected, $array)
     {
-        $this->assertEquals($equal, flatten($actual));
+        $this->assertEquals($expected, flatten($array));
     }
 
-    public function arrays()
+    public function additionProvider()
     {
         return [
             [[], []],
-            [[1, 2, [3, 5], [[4, 3], 4], 10], [1, 2, 3, 5, 4, 3, 4, 10]],
-            [[[1, [5], [], [[-3, 'hi']]], 'string', 10, [[[5]]]], [1, 5, -3, 'hi', 'string', 10, 5]],
-            [[null, '\n', [[true => false]]], [null, '\n', false]],
+            [[1], [1]],
+            [[1, 2, 3], [1, 2, 3]],
+            [[], [[]]],
+            [[1], [1, [], [[]]]],
+            [[1, 'value', 4], [[1], ['key' => 'value', [4]]]],
+            [[1, 2, 3, 3, 'value'], [1, [2, 3], [[3], ['key' => ['key' => 'value']]]]]
         ];
     }
 }
-*/
