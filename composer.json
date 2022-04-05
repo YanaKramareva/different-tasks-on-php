@@ -1,6 +1,6 @@
 {
   "name": "hexlet/php-package",
-  "bin": ["bin/php-package"],
+  "bin": ["bin/wheather.php"],
   "type": "library",
   "authors": [
     {
@@ -68,7 +68,20 @@
       "src/CompareVersion.php",
       "src/GetLongestLength.php",
       "src/GetLinks.php",
-      "src/ReverseNumber.php"
+      "src/ReverseNumber.php",
+      "src/RotateLeft.php",
+      "src/SumIntervals.php",
+      "src/FromPairs.php",
+      "src/FindWhere.php",
+      "src/ToRna.php",
+      "src/ToRoman.php",
+      "src/Scrabble.php",
+      "src/Combine.php",
+      "src/FindIndexOfNearest.php",
+      "src/GetSameParity.php",
+      "src/Decode.php",
+      "src/FilterAnagrams.php",
+      "src/Main.php"
     ]
   },
   "require": {
@@ -80,7 +93,11 @@
     "fzaninotto/faker": "^1.5",
     "knplabs/github-api": "^3.0",
     "guzzlehttp/guzzle": "^7.0.1",
-    "http-interop/http-factory-guzzle": "^1.0"
+    "http-interop/http-factory-guzzle": "^1.0",
+    "mikehaertl/php-shellcommand": "*",
+    "symfony/yaml": "^6.0",
+    "hackzilla/password-generator": "^1.6",
+    "php-di/php-di": "*"
   },
   "require-dev": {
     "psy/psysh": "@stable",
