@@ -6,7 +6,7 @@ use PHPUnit\Framework\TestCase;
 
 use function App\Solution\isPowerOfThree;
 
-class IsPOwerOrThreeTest extends TestCase
+class IsPowerOrThreeTest extends TestCase
 {
     public function testIsPowerOfThree()
     {
