@@ -5,7 +5,8 @@
  * Теперь мы добавим ему интерфейс и дополнительно реализуем сериализацию.
 
 src/KeyValueStorageInterface.php
-Реализуйте интерфейс KeyValueStorageInterface, который расширяет интерфейс \Serializable и имеет следующие методы:
+Реализуйте интерфейс KeyValueStorageInterface, который расширяет интерфейс \Serializable
+и имеет следующие методы:
 
 set($key, $value);
 get($key, $default = null);
@@ -14,7 +15,8 @@ toArray();
 src/InMemoryKV.php
 Реализуйте в классе InMemoryKV интерфейс \Serializable, который встроен в PHP.
 Этот интерфейс позволяет применять к объектам методы serialize и unserialize.
-Функция serialize позволяет представить объект строкой и сохранить его куда-нибудь в файловую систему или передать по сети.
+Функция serialize позволяет представить объект строкой и сохранить его куда-нибудь в файловую систему
+ или передать по сети.
 Функция unserialize выполняет обратную операцию и восстанавливает сериализованный объект.
 Для сериализации используйте json_encode, для десериализации json_decode.
  interface KeyValueStorageInterface extends \Serializable

@@ -55,39 +55,45 @@ namespace App\HTML;
 
 function stringifyHtml(array $tag): string
 {
-    $type = $tag['tagType'];$mapping = [
+    $type = $tag['tagType'];
+    $mapping = [
         'pair' =>
             function ($tag) {
                 $pair = '';
                 $info = '';
-                $body = '';foreach ($tag as $key => $value) {
+                $body = '';
+                foreach ($tag as $key => $value) {
                     switch ($key) {
                         case 'name':
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        $pair = $value;
-                            break;case 'tagType':
-                                       break;case 'body':
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        $body = ">{$value}<";
-                                                  break;default:
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             $info = $info . ' ' . $key . '=' . '"' . $value . '"';
+                            $pair = $value;
+                            break;
+                        case 'tagType':
+                            break;
+                        case 'body':
+                            $body = ">{$value}<";
+                            break;
+                        default:
+                            $info .= ' ' . $key . '=' . '"' . $value . '"';
                     }
                 }
-                $acc = "<{$pair}{$info}{$body}/{$pair}>";
-                return $acc;
+                return "<{$pair}{$info}{$body}/{$pair}>";
             },
         'single' =>
                 function ($tag) {
                     $pair = '';
-                    $body = '';foreach ($tag as $key => $value) {
+                    $body = '';
+                    foreach ($tag as $key => $value) {
                         switch ($key) {
                             case 'name':
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      $pair = $value;
-                                break;case 'tagType':
-                                           break;default:
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      $body = $body . ' ' . $key . '=' . '"' . $value . '"';
+                                $pair = $value;
+                                break;
+                            case 'tagType':
+                                break;
+                            default:
+                                $body .= ' ' . $key . '=' . '"' . $value . '"';
                         }
                     }
-                    $acc = "<{$pair}{$body}>";
-                    return $acc;
+                    return "<{$pair}{$body}>";
                 }
             ];
     return $mapping[$type]($tag);
